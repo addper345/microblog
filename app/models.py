@@ -34,5 +34,5 @@ class Post(db.Model):
     author: so.Mapped[User] = so.relationship(back_populates='posts')
 
 @login.user_loader
-    def load_user(id):
-        return db.session.get(User, int(id))
+def load_user(id):
+    return db.session.get(User, int(id))
