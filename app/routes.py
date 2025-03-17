@@ -139,3 +139,10 @@ def index():
     posts = db.session.scalars(current_user.following_posts()).all()
     return render_template("index.html", title='Home Page', form=form,
                            posts=posts)
+
+@app.route('/explore')
+@login_required
+def explore():
+    query = sa.select(Post).order_by(Post.timestamp.desc())
+    posts = db.session.scalars(query).all()
+    return render_template('index.html', title='Explore', posts=posts)
