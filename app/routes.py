@@ -10,22 +10,6 @@ from urllib.parse import urlsplit
 from datetime import datetime, timezone
 
 
-@app.route('/')
-@app.route('/index')
-@login_required
-def index():
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-    return render_template('index.html', title='Home Page', posts=posts)
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -152,15 +136,6 @@ def index():
         db.session.commit()
         flash('Your post is now live!')
         return redirect(url_for('index'))
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
+    posts = db.session.scalars(current_user.following_posts()).all()
     return render_template("index.html", title='Home Page', form=form,
                            posts=posts)
