@@ -1,39 +1,4 @@
-2025-03-21 22:13:28,942 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
-Traceback (most recent call last):
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 540, in send
-    message.send(connection)
-    ~~~~~~~~~~~~^^^^^^^^^^^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 482, in send
-    connection.send(self)
-    ~~~~~~~~~~~~~~~^^^^^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 177, in send
-    self.host.sendmail(
-    ~~~~~~~~~~~~~~~~~~^
-        sanitize_address(envelope_from or message.sender),
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-        message.rcpt_options,
-        ^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 861, in sendmail
-    self.ehlo_or_helo_if_needed()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 611, in ehlo_or_helo_if_needed
-    if not (200 <= self.ehlo()[0] <= 299):
-                   ~~~~~~~~~^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 451, in ehlo
-    self.putcmd(self.ehlo_msg, name or self.local_hostname)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 378, in putcmd
-    self.send(f'{s}{CRLF}')
-    ~~~~~~~~~^^^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 365, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
-
-During handling of the above exception, another exception occurred:
-
+2025-03-22 00:35:50,217 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -60,21 +25,69 @@ Traceback (most recent call last):
   File "C:\Users\addpe\OneDrive\Documents\Microblog\app\email.py", line 11, in send_email
     mail.send(msg)
     ~~~~~~~~~^^^^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 539, in send
-    with self.connect() as connection:
-         ~~~~~~~~~~~~^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 136, in __exit__
-    self.host.quit()
-    ~~~~~~~~~~~~~~^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 993, in quit
-    res = self.docmd("quit")
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 431, in docmd
-    self.putcmd(cmd, args)
-    ~~~~~~~~~~~^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 378, in putcmd
-    self.send(f'{s}{CRLF}')
-    ~~~~~~~~~^^^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 365, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
-2025-03-21 22:17:03,433 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 540, in send
+    message.send(connection)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 482, in send
+    connection.send(self)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 177, in send
+    self.host.sendmail(
+    ~~~~~~~~~~~~~~~~~~^
+        sanitize_address(envelope_from or message.sender),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        message.rcpt_options,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 897, in sendmail
+    raise SMTPDataError(code, resp)
+smtplib.SMTPDataError: (450, b'The from.email domain must be verified in your account to send emails. #MS42207 The from.email domain must be verified in your account to send emails. #MS42207')
+2025-03-22 00:35:50,987 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\routes.py", line 179, in reset_password_request
+    send_password_reset_email(user)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\email.py", line 15, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               sender=app.config['ADMINS'][0],
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+               html_body=render_template('email/reset_password.html',
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                         user=user, token=token))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\email.py", line 11, in send_email
+    mail.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 540, in send
+    message.send(connection)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 482, in send
+    connection.send(self)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 177, in send
+    self.host.sendmail(
+    ~~~~~~~~~~~~~~~~~~^
+        sanitize_address(envelope_from or message.sender),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        message.rcpt_options,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 897, in sendmail
+    raise SMTPDataError(code, resp)
+smtplib.SMTPDataError: (450, b'The from.email domain must be verified in your account to send emails. #MS42207 The from.email domain must be verified in your account to send emails. #MS42207')
+2025-03-22 00:37:16,468 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]

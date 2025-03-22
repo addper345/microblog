@@ -1,4 +1,4 @@
-2025-03-22 00:14:23,503 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
+2025-03-21 23:38:17,101 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -50,8 +50,7 @@ Traceback (most recent call last):
     sock.connect(sa)
     ~~~~~~~~~~~~^^^^
 TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
-2025-03-22 00:33:07,156 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]
-2025-03-22 00:33:16,156 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
+2025-03-21 23:38:18,282 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -97,11 +96,11 @@ Traceback (most recent call last):
            ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
                                     self.source_address)
                                     ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 840, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-socket.gaierror: [Errno 11001] getaddrinfo failed
-2025-03-22 00:35:43,351 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-03-21 23:52:50,462 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]
+2025-03-21 23:55:56,115 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]

@@ -1,57 +1,4 @@
-2025-03-22 00:14:23,503 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
-Traceback (most recent call last):
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\routes.py", line 179, in reset_password_request
-    send_password_reset_email(user)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\email.py", line 15, in send_password_reset_email
-    send_email('[Microblog] Reset Your Password',
-    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-               sender=app.config['ADMINS'][0],
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-               html_body=render_template('email/reset_password.html',
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                                         user=user, token=token))
-                                         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\email.py", line 11, in send_email
-    mail.send(msg)
-    ~~~~~~~~~^^^^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 539, in send
-    with self.connect() as connection:
-         ~~~~~~~~~~~~^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 127, in __enter__
-    self.host = self.configure_host()
-                ~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 144, in configure_host
-    host = smtplib.SMTP(self.mail.server, self.mail.port)
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 255, in __init__
-    (code, msg) = self.connect(host, port)
-                  ~~~~~~~~~~~~^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 341, in connect
-    self.sock = self._get_socket(host, port, self.timeout)
-                ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 312, in _get_socket
-    return socket.create_connection((host, port), timeout,
-           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-                                    self.source_address)
-                                    ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
-    raise exceptions[0]
-  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
-    sock.connect(sa)
-    ~~~~~~~~~~~~^^^^
-TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
-2025-03-22 00:33:07,156 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]
-2025-03-22 00:33:16,156 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
+2025-03-21 23:31:16,151 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -103,5 +50,58 @@ Traceback (most recent call last):
   File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-socket.gaierror: [Errno 11001] getaddrinfo failed
-2025-03-22 00:35:43,351 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]
+socket.gaierror: [Errno 11003] getaddrinfo failed
+2025-03-21 23:31:45,962 INFO: Microblog startup [in C:\Users\addpe\OneDrive\Documents\Microblog\app\__init__.py:44]
+2025-03-21 23:31:55,168 ERROR: Exception on /reset_password_request [POST] [in C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\routes.py", line 179, in reset_password_request
+    send_password_reset_email(user)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\email.py", line 15, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               sender=app.config['ADMINS'][0],
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+               html_body=render_template('email/reset_password.html',
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                         user=user, token=token))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\app\email.py", line 11, in send_email
+    mail.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 539, in send
+    with self.connect() as connection:
+         ~~~~~~~~~~~~^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 127, in __enter__
+    self.host = self.configure_host()
+                ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\addpe\OneDrive\Documents\Microblog\venv\Lib\site-packages\flask_mail\__init__.py", line 144, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+                                    self.source_address)
+                                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 840, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\addpe\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11003] getaddrinfo failed
